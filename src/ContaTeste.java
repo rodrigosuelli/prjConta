@@ -1,28 +1,32 @@
 import java.util.Scanner;
 
 public class ContaTeste {
-    public Conta cc = new Conta();
+    public static Conta cc = new Conta();
     public static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        exibirMenu();
-        int opc = receberOpcao("Escolha uma operacao:");
+        int opc = 0;
 
-        switch (opc) {
-            case 1:
-                execCadastrar();
-                break;
-            case 2:
-                execDepositar();
-                break;
-            case 3:
-                execSacar();
-                break;
-            case 4:
-                execConsultar();
-                break;
-            default:
-                break;
+        while (opc != 5) {
+            exibirMenu();
+            opc = receberOpcao("Escolha uma operacao:");
+            switch (opc) {
+                case 1:
+                    execCadastrar();
+                    break;
+                case 2:
+                    execDepositar();
+                    break;
+                case 3:
+                    execSacar();
+                    break;
+                case 4:
+                    execConsultar();
+                    break;
+                default:
+                    break;
+            }
+            System.out.println("======================");
         }
     }
 
@@ -40,7 +44,7 @@ public class ContaTeste {
         System.out.println("2. Depositar");
         System.out.println("3. Sacar");
         System.out.println("4. Consultar");
-        System.out.println("0. Sair");
+        System.out.println("5. Sair");
     }
 
     public static void execSacar() {
