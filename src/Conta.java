@@ -38,11 +38,11 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta{" +
-                "conta='" + conta + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", saldo=" + saldo +
-                ", nomeCliente='" + nomeCliente + '\'' +
+        return "Conta{" + "\n" +
+                "conta='" + conta + '\'' + "\n" +
+                "agencia='" + agencia + '\'' + "\n" +
+                "saldo=" + saldo + "\n" +
+                "nomeCliente='" + nomeCliente + '\'' + "\n" +
                 '}';
     }
 
