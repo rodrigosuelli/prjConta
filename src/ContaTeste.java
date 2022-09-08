@@ -43,19 +43,33 @@ public class ContaTeste {
         System.out.println("0. Sair");
     }
 
-    public static int execSacar() {
-        return 1;
+    public static void execSacar() {
+        System.out.println("Insira o valor a ser sacado: ");
+        double valor = Double.parseDouble(scan.nextLine());
+        int saqueRealizado = cc.sacar(valor);
+        if (saqueRealizado == 1) {
+            System.out.println("Saque realizado");
+        } else {
+            System.out.println("Saque não realizado");
+        }
     }
 
     public static void execDepositar() {
-
+        System.out.println("Insira o valor a ser depositado: ");
+        double valor = Double.parseDouble(scan.nextLine());
+        cc.depositar(valor);
     }
 
     public static void execConsultar() {
-
+        System.out.println(cc);
     }
 
     public static void execCadastrar() {
-
+        System.out.println("Insira o nome do cliente: ");
+        cc.setNomeCliente(scan.nextLine());
+        System.out.println("Insira a conta: ");
+        cc.setConta(scan.nextLine());
+        System.out.println("Insira a agencia: ");
+        cc.setAgencia(scan.nextLine());
     }
 }
